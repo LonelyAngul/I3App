@@ -1,0 +1,139 @@
+page-home {
+
+  .bottom-dis {
+    position: absolute;
+    width: 100%;
+    height: 4rem;
+    line-height: 4rem;
+    z-index: 100;
+    bottom: 0;
+    color: white;
+  }
+  .swiper-pagination {
+    bottom: 50px !important;
+  }
+
+  /*广告栏*/
+  ion-slides {
+    height: auto;
+  }
+  /*slider背景白色的*/
+  ion-slides ion-slide {
+    background-color: #fff;
+  }
+  /*布局*/
+  .grid {
+    background: #fff;
+  }
+  .row {
+    text-align: center;
+  }
+  [col-3] {
+    display: block;
+    padding: 0;
+    height: 7rem;
+  }
+  [col-3] img {
+    height: 4.5rem;
+    width: 4.5rem;
+  }
+  [col-3] span {
+    display: block;
+    color: #222222;
+  }
+
+  /* 农药信息检索*/
+  .searchbar-md .searchbar-search-icon,
+  .searchbar-ios .searchbar-search-icon {
+    background-image: url('assets/imgs/home/seach_btn.png');
+    top: 14px;
+    width: 25px;
+    height: 25px;
+  }
+  .searchbar-md .searchbar-input,
+  .searchbar-ios .searchbar-input {
+    border-radius: 1.8rem;
+  }
+
+  /* 列表*/
+  .list-header-md,
+  .list-header-ios {
+    margin-top: 10px;
+    margin-bottom: 0px;
+    border-bottom: 1px solid #dedede;
+    border-top: none;
+    text-align: center;
+    color: #222222;
+    font-size: 1.7rem;
+  }
+  .list-header-md img,
+  .list-header-ios img {
+    width: 30px;
+    height: 28px;
+    vertical-align: middle;
+  }
+  /* 列表主体*/
+  .item-md ion-thumbnail ion-img, .item-md ion-thumbnail img,
+  .item-ios ion-thumbnail ion-img, .item-ios ion-thumbnail img {
+    height: 60px;
+    width: 90px;
+  }
+  .item-md ion-avatar[item-left], .item-md ion-thumbnail[item-left], .item-md ion-avatar[item-start], .item-md ion-thumbnail[item-start],
+  .item-ios ion-avatar[item-left], .item-ios ion-thumbnail[item-left], .item-ios ion-avatar[item-start], .item-ios ion-thumbnail[item-start] {
+    margin: 8px 16px 8px 0;
+  }
+
+  .item-md, .item-ios {
+    border-bottom: 1px solid #dedede;
+  }
+
+  .list-md .item-block .item-inner, .list-ios .item-block .item-inner {
+    border-bottom: 0px solid #dedede;
+  }
+
+  .label-md, .label-ios {
+    margin: 5px 8px 5px 0;
+  }
+
+  // 標題
+  .item-md h2, .item-ios h2 {
+    font-size: 1.5rem;
+    color: #222;
+  }
+  // 正文
+  .item-md p, .item-ios p {
+    font-size: 1.3rem;
+    color: #7a7a7a;
+    margin: 2px 0 0px 0;
+  }
+
+  // 时间
+  .item-md span, .item-ios span {
+    font-size: 1rem;
+    color: #7a7a7a;
+  }
+
+  .seacher-btn {
+    display: inline-block;
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    right: 2rem;
+    top: 36.5%;
+  }
+
+  .searchbar-clear-icon {
+    display: none !important;
+  }
+
+  .back-btn {
+    display: inline-block;
+    white-space: nowrap;
+    margin-top: 2rem;
+    color: gray;
+    font-size: 10px;
+    line-height: 10px;
+    margin-left: -0.8rem;
+    text-align: left;
+  }
+}

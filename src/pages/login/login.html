@@ -1,0 +1,34 @@
+<ion-content>
+  <div class="login" style="background: url(assets/imgs/login/login.jpg) 0px 0px no-repeat" ion-fixed>
+    <!-- <div class="bg"><img src="assets/imgs/login/login.jpg"></div>-->
+    <div class="login-form">
+      <form [formGroup]="loginForm" (ngSubmit)="login(loginForm.value)">
+        <ion-list>
+          <div class="login-label">用户</div>
+          <div class="login-input">
+            <span>
+              <ion-icon class="iconfont icon-wode"></ion-icon>
+            </span>
+            <ion-input type="text" formControlName="username" clearInput placeholder="输入您的用户名"></ion-input>
+          </div>
+
+          <div class="login-label">密码</div>
+          <div class="login-input">
+            <span>
+              <ion-icon class="iconfont icon-yonghuming"></ion-icon>
+            </span>
+            <ion-input type="password" formControlName="password" clearInput placeholder="输入您的密码"></ion-input>
+          </div>
+
+        </ion-list>
+        <div padding-horizontal class="login-submit">
+          <!--true不可用-->
+          <button ion-button block type="submit" [disabled]="!loginForm.valid||submitted">登　录</button>
+        </div>
+      </form>
+
+    </div>
+
+  </div>
+
+</ion-content>

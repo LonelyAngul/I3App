@@ -1,0 +1,78 @@
+<!--
+  Generated template for the TestPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>测试文科</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <button ion-button (click)="xx()">拍照</button>
+  <button ion-button (click)="yy()">图库</button>
+
+  <br>
+
+  <!--<ion-item>
+    <ion-checkbox ng-repeat="item in devList"
+                  ng-model="item.checked"
+                  ng-checked="item.checked">
+      {{ item.text }}
+    </ion-checkbox>
+  </ion-item>-->
+  <!--<div *ngFor="let c of ck">
+    <ion-item>
+      <ion-label>{{c.b}}</ion-label>
+      <ion-checkbox [(ngModel)]="c.a" (ionChange)="updateCucumber()"></ion-checkbox>
+    </ion-item>
+  </div>-->
+
+  <!--<ion-item>
+    <ion-label>b</ion-label>
+    <ion-checkbox [(ngModel)]="c" (ionChange)="updateCucumber()"></ion-checkbox>
+  </ion-item>
+  <ion-item>
+    <ion-label>c</ion-label>
+    <ion-checkbox [(ngModel)]="ck.c" (ionChange)="updateCucumber()"></ion-checkbox>
+  </ion-item>
+-->
+
+
+  <!--<img [src]="img">-->
+
+  <!--<ion-scroll #chatScroll scrollY="true" style="width:100%;height:100%">
+  </ion-scroll>-->
+  <!--<div *ngFor="let data of pageView.dataLists" style="width:100%;margin: 5px 0;height: 30px;background-color: gray">
+
+    {{data?.dd}}
+
+  </div>-->
+
+  <h2>获得地图定位</h2>
+  <button ion-button (click)="getLocation()">获得定位</button>
+
+  <!--下拉刷新-->
+  <!--<ion-refresher (ionRefresh)="pageView.doRefresherOrInfinite($event)">
+    <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText="下拉刷新"
+      refreshingSpinner="bubbles"
+      refreshingText="加载中…">
+    </ion-refresher-content>
+  </ion-refresher>
+
+  &lt;!&ndash;暂无数据&ndash;&gt;
+  <h3 *ngIf="pageView.hasNullData" style="text-align: center;color: #847D7D;">暂无数据</h3>
+  <ion-infinite-scroll (ionInfinite)="pageView.doRefresherOrInfinite($event)" threshold="10%">
+    <ion-infinite-scroll-content
+      loadingSpinner="bubbles"
+      loadingText="加载中…">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>-->
+</ion-content>

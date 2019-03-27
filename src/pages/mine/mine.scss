@@ -1,0 +1,72 @@
+page-mine {
+  //毛玻璃
+  .bg{
+    height: 40%;
+    /*background-image: url("assets/imgs/temp.jpg");*/
+  }
+
+  .bg-blur{
+    width: 100%;
+    height: 40%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    -webkit-filter: blur(15px);
+    -moz-filter: blur(15px);
+    -o-filter: blur(15px);
+    -ms-filter: blur(15px);
+    filter: blur(15px);
+  }
+
+  .content {
+      color: #ffffff;
+  }
+
+  .content-front {
+    border: 4px solid #fff;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: 4rem;
+    left: calc(50% - 60px);
+    overflow: hidden;
+  }
+  
+  //用户信息
+  .userinfo{
+    position: absolute;
+    text-align: center;
+    min-width: 100px;
+    top: calc(4.5rem + 130px);
+    display: inline;
+    left: calc(50% - 50px);
+  }
+
+  .username{
+    font-size: 1.5rem;
+    padding: 0rem 1rem 0rem  1rem;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 1rem;
+  }
+
+//列表样式
+  .item-md ion-icon[item-left] + .item-inner, .item-md ion-icon[item-left] + .item-input, .item-md ion-icon[item-start] + .item-inner, .item-md ion-icon[item-start] + .item-input,
+  .item-ios ion-icon[item-left] + .item-inner, .item-ios ion-icon[item-left] + .item-input, .item-ios ion-icon[item-start] + .item-inner, .item-ios ion-icon[item-start] + .item-input{
+    margin-left: 5px;
+  }
+
+  .item-md,.item-ios{
+    border-bottom: 1px solid #dedede;
+  }
+
+  .list-md .item-block .item-inner,
+  .list-ios .item-block .item-inner{
+    border-bottom: 0px solid #dedede;
+  }
+
+  .item-md ion-icon[item-left], .item-md ion-icon[item-right], .item-md ion-icon[item-start], .item-md ion-icon[item-end],
+  .item-ios ion-icon[item-left], .item-ios ion-icon[item-right], .item-ios ion-icon[item-start], .item-ios ion-icon[item-end]{
+    padding-top:3px;
+  }
+}

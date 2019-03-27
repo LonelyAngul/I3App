@@ -1,0 +1,41 @@
+page-tabs {
+  //底部tab颜色
+  .tabs-md .tabbar, .tabs-ios .tabbar {
+    background: #f7f7f7;
+  }
+  //
+  ////底部图标颜色-未选中
+  //.tabs-md .tab-button-icon,
+  //.tabs-ios .tab-button-icon {
+  //  color: #3971A4;
+  //  font-size: 3.4rem;
+  //}
+  ////底部字体颜色-未选中
+  //.tabs-md .tab-button,
+  //.tabs-ios .tab-button {
+  //  color: #B1B5B8;
+  //}
+  //
+  ////底部字体颜色-选中
+  //.tabs-md .tab-button[aria-selected=true],
+  //.tabs-ios .tab-button[aria-selected=true] {
+  //  color: #fff;
+  //}
+  //
+  ////底部图标颜色-选中
+  //.tabs-md .tab-button[aria-selected=true] .tab-button-icon,
+  //.tabs-ios .tab-button[aria-selected=true] .tab-button-icon {
+  //  color: #1C88EA;
+  //  font-size: 3.8rem;
+  //}
+  //
+  //// 字跟图标的间距
+  //.tabs-md[tabsLayout=icon-top] .has-icon .tab-button-text,
+  //.tabs-ios[tabsLayout=icon-top] .has-icon .tab-button-text {
+  //  margin-top: 1px;
+  //}
+  //.tabs-md .tab-button-text,
+  //.tabs-ios .tab-button-text {
+  //  font-size: 1.3rem;
+  //}
+}

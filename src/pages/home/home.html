@@ -1,0 +1,173 @@
+<ion-content>
+  <ion-refresher (ionRefresh)="pageView.doRefresherOrInfinite($event);this.getCarouselImage()">
+    <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText="下拉刷新"
+      refreshingSpinner="bubbles"
+      refreshingText="加载中…">
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <!--是否显示上半部分-->
+  <ng-container *ngIf="isShowTopMenu">
+
+    <!--当有值时,显示轮播图-->
+    <!--<ng-container *ngIf="carouselImgs.length>0">
+      <ion-slides autoplay="3000" pager="true" loop="true" speed="300" autoplayDisableOnInteraction="false">
+        <ion-slide *ngFor="let img of carouselImgs">
+          <div class="bottom-dis">{{img.title}}</div>
+          <img [src]="img.src" style="height: 20rem;width: 100%">
+        </ion-slide>
+      </ion-slides>
+    </ng-container>-->
+
+
+    <div *ngIf="carouselImgs.length==0" style="width:100%;height: auto;">
+      <img src="assets/imgs/home/home-top.jpg">
+    </div>
+    <ng-container *ngIf="menu!=null && menu.length>1">
+      <ion-grid>
+        <ion-row>
+
+          <ng-container *ngFor="let m of menu[0];let i=index">
+
+            <ng-container *ngIf="m!=null">
+              <ion-col col-3 (click)="skipTo(m.val)">
+                <img [src]="m?.ico">
+                <span>{{m?.name}}</span>
+              </ion-col>
+            </ng-container>
+          </ng-container>
+
+        </ion-row>
+
+        <ion-row *ngIf="menu[1]!=null">
+          <ng-container *ngFor="let m of menu[1];let i=index">
+
+            <ng-container *ngIf="m!=null">
+              <ion-col col-3 (click)="skipTo(m?.val)">
+                <img [src]="m?.ico">
+                <span>{{m?.name}}</span>
+              </ion-col>
+            </ng-container>
+          </ng-container>
+        </ion-row>
+
+        <!--<ion-col col-3 (click)="skipTo('EnterpriseListPage')">
+          <img src="assets/imgs/home/qycx.png">
+          <span>企业查询</span>
+        </ion-col>
+
+        <ion-row *ngFor="let i of menu">
+
+        </ion-row>
+  -->
+
+      </ion-grid>
+    </ng-container>
+
+    <!--<ion-grid>
+      <ion-row>
+        <ion-col col-3 (click)="skipTo('EnterpriseListPage')">
+          <img src="assets/imgs/home/qycx.png">
+          <span>企业查询</span>
+        </ion-col>
+        <ion-col col-3 (click)="skipTo('ShopListPage')">
+          <img src="assets/imgs/home/jydw.png">
+          <span>经营单位</span>
+        </ion-col>
+        <ion-col col-3>
+          <img src="assets/imgs/home/cpdj.png" (click)="skipTo('PesticidesPage')">
+          <span>登记产品</span>
+        </ion-col>
+        <ion-col col-3>
+          <img src="assets/imgs/home/nygh.png" (click)="scan()">
+          <span>农药规划</span>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-3>
+          <img src="assets/imgs/home/wgjb.png" (click)="skipTo('ViolationReportPage')">
+          <span>违法举报</span>
+        </ion-col>
+        <ion-col col-3>
+          <img src="assets/imgs/home/wdxx.png" (click)="skipTo('MessagePage')">
+          <span>我的消息</span>
+        </ion-col>
+        <ion-col col-3>
+          <img src="assets/imgs/home/nyzx.png" (click)="skipToInfo()">
+          <span>农药咨询</span>
+        </ion-col>
+        <ion-col col-3>
+          <span></span>
+        </ion-col>
+      </ion-row>
+    </ion-grid>-->
+
+  </ng-container>
+  <ion-grid *ngIf="false">
+    <ion-row>
+      <ion-col col-1>
+        <span class="back-btn" (click)="goHome()" *ngIf="!isShowTopMenu">
+          <ion-icon class="iconfont icon-fanhui"></ion-icon>返回
+        </span>
+      </ion-col>
+      <ion-col col-10>
+        <ion-searchbar [(ngModel)]="seacherVal"
+                       animated="true"
+                       showCancelButton="true"
+                       placeholder="资讯信息检索"
+                       (ionFocus)="focusInput()"
+                       (ionBlur)="blurInput()"
+                       (ionCancel)="seacherBar('clear')">
+
+        </ion-searchbar>
+        <span class="seacher-btn" (click)="seacherBar()">
+          <img src="assets/imgs/home/go.png">
+        </span>
+      </ion-col>
+      <ion-col col-1></ion-col>
+    </ion-row>
+
+    <!-- <ion-row>
+       <ion-col col-1>22</ion-col>
+       <ion-col col-10 style="white-space: nowrap">
+         <ion-searchbar [(ngModel)]="seacherVal" (ionChange)="seacherBar()" placeholder="资讯信息检索"></ion-searchbar>
+         &lt;!&ndash;<button ion-button>搜索</button>&ndash;&gt;
+       </ion-col>
+       <ion-col col-1>11</ion-col>
+     </ion-row>-->
+  </ion-grid>
+
+  <ion-list>
+    <ion-list-header>
+      <img src="assets/imgs/home/nydt.png">
+      <span>农药动态</span>
+    </ion-list-header>
+    <ion-item *ngFor="let data of pageView.dataLists" (click)="skipToDetail(data.id)">
+      <h2> {{data?.title}}</h2>
+      <p> {{data?.summary}}</p>
+      <span>{{data?.createtime}}</span>
+    </ion-item>
+  </ion-list>
+
+  <!-- <button ion-button (click)="go()">点击发送</button>
+  <button ion-button (click)="to()">跳转</button>
+  <button ion-button (click)="setData()">存值</button>
+  <button ion-button (click)="getData()">取值</button>
+  <button ion-button (click)="cleanData()">清空值</button>
+  <button ion-button (click)="skip()">预览图片</button>
+  <button ion-button (click)="setAli()">设置极光推送别名为sky</button>
+  <button ion-button (click)="this.navCtrl.push('EnterpriseListPage')">企业查询</button> -->
+
+
+  <!--暂无数据-->
+  <h3 *ngIf="pageView.hasNullData" style="text-align: center;color: #847D7D;">暂无数据</h3>
+  <ion-infinite-scroll (ionInfinite)="pageView.doRefresherOrInfinite($event)" threshold="10%">
+    <ion-infinite-scroll-content
+      loadingSpinner="bubbles"
+      loadingText="加载中…">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+</ion-content>

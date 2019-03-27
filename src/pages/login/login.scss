@@ -1,0 +1,88 @@
+page-login {
+
+  scroll-content {
+    overflow: hidden !important;
+  }
+
+  .login {
+    display: flex;
+    justify-content: center;
+    /* align-items: Center;*/
+    width: 100%;
+    height: 100%;
+    /*background: url("/assets/imgs/login/login.jpg") no-repeat;*/
+    background-size: cover !important;
+    overflow: hidden;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .login-form {
+    margin-top: 10rem;
+  }
+
+  /*.login .bg {
+    position: absolute !important;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+  }*/
+
+  //输入框
+  /*.item-inner {
+    border-bottom: 0 !important;
+  }*/
+
+  /*ion-item {
+    border: 0 !important;
+  }
+  item, item-block, item-md, item-input, ng-pristine, ng-invalid, ng-touched {
+    border: 0 !important;
+    height: 0 !important;
+  }
+  .item-input-has-focus, .input-has-focus {
+    border: 0 !important;
+    height: 0 !important;
+  }
+  .item-inner {
+    border: 0 !important;
+  }*/
+
+  /*input {
+    background-color: white !important;
+    height: 50px !important;
+  }*/
+
+  .login-label {
+    font-family: "Microsoft YaHei";
+    text-align: center;
+    margin: 0rem 0 0.5rem 0;
+    visibility: hidden;
+  }
+  .login-label:first-child {
+    margin-top: 5rem;
+  }
+
+  .login-input {
+    position: relative;
+    margin: 0rem 0;
+    padding: 0rem 3rem;
+    border: 1px solid #b1d2f3;
+    border-radius: 30px;
+    span {
+      position: absolute;
+      display: inline-block;
+      width: 1.6rem;
+      height: 1.6rem;
+      left: 1rem;
+      top: 1rem;
+    }
+  }
+}
+
+.login-submit {
+  margin-top: 3rem;
+  button {
+    border-radius: 30px;
+    background: linear-gradient(to right, #07b1d5, #1981fe);
+  }
+}

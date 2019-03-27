@@ -1,0 +1,206 @@
+// http://ionicframework.com/docs/theming/
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+//禁掉右边竖条
+::-webkit-scrollbar {
+  display: none !important;
+}
+
+// 全局的字体
+ion-app.ios, ion-app.md {
+  font-family: 'Microsoft YaHei'
+}
+
+// 内容页背景
+.content-ios, .content-md {
+  background-color: #f1f5f6;
+}
+
+/*下拉刷新横线*/
+.has-refresher > .scroll-content {
+  border-top: 0px;
+}
+
+//顶部登录
+.my-header {
+  height: 15rem;
+  background-color: color($colors, primary);
+  ion-item {
+    height: 100%;
+    background: none;
+    ion-avatar {
+      width: 8rem;
+      height: 8rem;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  * {
+    color: white !important;
+  }
+}
+
+//列表与列表间距
+.list-ios, .list-md {
+  margin: -1px 0 16px;
+}
+
+.list-ios:first-child, .list-md:first-child {
+  margin: -1px 0 0;
+}
+
+// 自定义toast样式
+.toast-md .toast-wrapper.toast-middle, .toast-ios .toast-wrapper.toast-middle {
+  max-width: calc(100% - 30%);
+  top: 75% !important;
+  text-align: center;
+  filter: alpha(opacity=60);
+  -moz-opacity: 0.60;
+  opacity: 0.60;
+  background: none;
+}
+
+// 自定义toast样式
+.toast-container {
+  display: inline-flex !important;
+}
+
+// 自定义toast样式
+.toast-md .toast-message, .toast-ios .toast-message {
+  display: inline-block;
+  font-size: 1.4rem !important;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  width: auto;
+  padding: 1rem;
+}
+
+/**
+去除bar阴影
+ */
+.header-md::after, .header-ios::after {
+  background: none !important;
+}
+
+/**************自定义字体图标******************/
+
+@font-face {
+  font-family: "Ionicons";
+  src: url('../assets/alifonts/iconfont.eot?t=1505811132552'); /* IE9*/
+  src: url('../assets/alifonts/iconfont.eot?t=1505811132552#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../assets/alifonts/iconfont.woff?t=1505811132552') format('woff'), /* chrome, firefox */
+  url('../assets/alifonts/iconfont.ttf?t=1505811132552') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('../assets/alifonts/iconfont.svg?t=1505811132552#Ionicons') format('svg'); /* iOS 4.1- */
+}
+
+.icon {
+  font-family: "Ionicons" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*tab*/
+
+.ion-md-icon-nongyaoshouye:before { content: "\e66f"; }
+.ion-ios-icon-nongyaoshouye:before { content: "\e66f"; }
+
+.ion-md-icon-wode:before { content: "\e66a"; }
+.ion-ios-icon-wode:before { content: "\e66a"; }
+
+.ion-md-icon-zixun1:before { content: "\e66d"; }
+.ion-ios-icon-zixun1:before { content: "\e66d"; }
+
+.ion-md-icon-fanhui:before { content: "\e623"; }
+.ion-ios-icon-fanhui:before { content: "\e623"; }
+
+/*其它图标*/
+
+.icon-fanhui:before { content: "\e623"; }
+
+.icon-iconfontzhizuobiaozhun0252:before { content: "\e6a8"; }
+
+.icon-xiaoxi:before { content: "\e62f"; }
+
+.icon-geren:before { content: "\e677"; }
+
+.icon-app:before { content: "\e6cd"; }
+
+.icon-danwei:before { content: "\e6b2"; }
+
+.icon-guanliduan:before { content: "\e605"; }
+
+.icon-yonghuming:before { content: "\e60d"; }
+
+.icon-xiayibu:before { content: "\e65e"; }
+
+.icon-ruanjianxiazai:before { content: "\e715"; }
+
+.icon-shu:before { content: "\e65f"; }
+
+.icon-dengjichiyouren:before { content: "\e660"; }
+
+.icon-nongyaobiaoqian:before { content: "\e661"; }
+
+.icon-shengchanqiye:before { content: "\e663"; }
+
+.icon-jingyingdanwei:before { content: "\e664"; }
+
+.icon-shiyandanwei:before { content: "\e665"; }
+
+.icon-dengjixinxi:before { content: "\e666"; }
+
+.icon-nongyaozixun:before { content: "\e662"; }
+
+.icon-nongyaozhuisu:before { content: "\e667"; }
+
+.icon-guanyuwomen:before { content: "\e668"; }
+
+.icon-weiguijubao:before { content: "\e669"; }
+
+.icon-wode:before { content: "\e66a"; }
+
+.icon-zixun:before { content: "\e66b"; }
+
+.icon-wode1:before { content: "\e66c"; }
+
+.icon-zixun1:before { content: "\e66d"; }
+
+.icon-nongyaoshouye:before { content: "\e66e"; }
+
+.icon-nongyaoshouye1:before { content: "\e66f"; }
+
+.icon-sousuo:before { content: "\e670"; }
+
+.icon-wodexiaoxi:before { content: "\e671"; }
+
+.icon-qiyechaxun:before { content: "\e672"; }
+
+.icon-nongyaodongtai:before { content: "\e673"; }
+
+.icon-jingyingdanwei1:before { content: "\e674"; }
+
+.icon-zixunxinxi:before { content: "\e675"; }
+
+.icon-jichukuchaxun:before { content: "\e676"; }
+
+.icon-nongyaoshengchanqiye:before { content: "\e678"; }
+
+.icon-dengjinongyao:before { content: "\e679"; }

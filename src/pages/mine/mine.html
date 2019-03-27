@@ -1,0 +1,31 @@
+<ion-content>
+  <div class="bg bg-blur" style="background-image: url(assets/imgs/temp.jpg)"></div>
+  <img src="assets/imgs/temp.jpg" class="content content-front" width="120px" height="120px"/>
+
+  <div class="userinfo">
+    <div class="username">{{userinfo?.realname}}</div>
+    <div style="padding-top:0.3rem">
+      {{userinfo?.username}}
+    </div>
+  </div>
+
+  <ion-list>
+    <button ion-item (click)="skipToMineInfo()">
+      <ion-icon name="ios-contact" item-left color="primary"></ion-icon>
+      个人资料
+    </button>
+    <button ion-item (click)="this.navCtrl.push('MessagePage')">
+      <ion-icon name="ios-chatbubbles" item-left style="color:#f85c5b"></ion-icon>
+      我的消息
+    </button>
+    <button ion-item (click)="this.navCtrl.push('UpdatePasswordPage')">
+      <ion-icon name="md-lock" item-left style="color: #6fc572;"></ion-icon>
+      修改密码
+    </button>
+    <button ion-item (click)="skipToAbout()">
+      <ion-icon name="ios-disc-outline" item-left style="color: #D58D1D;"></ion-icon>
+      关于我们
+    </button>
+  </ion-list>
+
+</ion-content>

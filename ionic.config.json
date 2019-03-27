@@ -1,0 +1,8 @@
+{
+  "name": "scy",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular",
+  "id": "87a6ce52"
+}
